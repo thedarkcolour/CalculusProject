@@ -1,0 +1,73 @@
+h1 {
+    font-family: "Malgun Gothic Semilight", sans-serif;
+    text-align: center;
+}
+
+.calculator {
+    max-width: 30rem;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: hsl(300, 100%, 50%);
+    justify-content: center;
+
+    border-radius: 10px;
+    padding-bottom: 10px;
+    font-family: "Malgun Gothic Semilight", sans-serif;
+}
+
+.main-page {
+    column-gap: 30px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calculate {
+    font-size: 18px;
+    font-family: "Malgun Gothic Semilight", sans-serif;
+}
+
+.calculate-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#answer-box {
+    margin-top: 20px;
+    width: 26rem;
+    height: 6rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.form-input {
+    float: right;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: rgb(240, 240, 240);
+    border-style: solid;
+    /*margin-top: 1px;
+    margin-bottom: 1px;*/
+    font-family: "Malgun Gothic Semilight", sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input.form-input::-webkit-outer-spin-button,
+input.form-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number].form-input {
+    -moz-appearance: textfield;
+}
