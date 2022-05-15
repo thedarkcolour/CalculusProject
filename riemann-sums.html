@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Riemann Sums Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="app.js" charset="UTF-8"></script>
+    <script src="riemann.js" charset="UTF-8"></script>
+    <!-- https://github.com/josdejong/mathjs -->
+    <script src="math.js" charset="UTF-8"></script>
+</head>
+<body>
+
+<header>
+
+<img src="kiwi.gif" alt="Rotating Kiwi" class="kiwi">
+<nav class="header-navigation">
+
+<a class="header-link" href=index.html>Home</a>
+<a class="header-link" href="riemann-sums.html">Riemann Sums</a>
+<a class="header-link" href="eulers-method.html">Euler's Method</a>
+
+</nav>
+</header>
+
+
+<div class="main-page">
+    <div class="calculator">
+        <h1>Riemann Sums!</h1>
+
+        <form class="calculate-form">
+            <label class="form-option">Riemann Sum:
+                <select class="form-input" id="riemann-sum">
+                    <option>Left Sum</option>
+                    <option>Right Sum</option>
+                    <option>Midpoint Sum</option>
+                    <option>Trapezoid Sum</option>
+                </select>
+            </label>
+            <label>Function:
+                <select class="form-input" id="math-function">
+                    <option>y = sin(x)</option>
+                    <option>y = cos(x)</option>
+                    <option>y = ln(x)</option>
+                </select>
+            </label>
+            <label>Endpoint A = <input type="number" class="form-input" id="endpoint-a" value="1"></label>
+            <label>Endpoint B = <input type="number" class="form-input" id="endpoint-b" value="7"></label>
+            <label>Intervals = <input type="number" class="form-input" id="number-of-intervals" value="10"></label>
+        </form>
+        <button class="default-text" onclick="calculateRiemann()">Calculate</button>
+        <div id="answer-box">
+            <label>Approximation</label>
+            <h1 id="answer-contents">Put in some numbers...</h1>
+        </div>
+
+        <div id="calculations">
+
+        </div>
+    </div>
+    <!--<div class="calculator">
+        <h1>Euler's Method!</h1>
+        <form class="calculate-form">
+        </form>
+        <button class="calculate" onclick="calculateEuler()">Calculate</button>
+    </div>-->
+</div>
+
+</body>
+</html>

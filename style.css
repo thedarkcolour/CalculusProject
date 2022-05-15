@@ -4,8 +4,8 @@ h1 {
 }
 
 .calculator {
-    max-width: 30rem;
-    width: 100%;
+    width: 30rem;
+    /*width: 100%;*/
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -13,7 +13,7 @@ h1 {
     background-color: hsl(300, 100%, 50%);
     justify-content: center;
 
-    border-radius: 10px;
+    border-radius: 20px;
     padding-bottom: 10px;
     font-family: "Malgun Gothic Semilight", sans-serif;
 }
@@ -25,11 +25,17 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.calculate {
+.default-text {
     font-size: 18px;
     font-family: "Malgun Gothic Semilight", sans-serif;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    border-style: solid;
 }
 
 .calculate-form {
@@ -38,15 +44,43 @@ h1 {
     padding: 20px;
 }
 
+.kiwi {
+    max-width: 80px;
+    padding-right: 30px;
+}
+
 #answer-box {
     margin-top: 20px;
     width: 26rem;
-    height: 6rem;
+    /*height: 6rem;*/
     align-items: center;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: white;
+}
+
+table {
+    font-family: "Malgun Gothic Semilight", sans-serif;
+    background-color: white;
+    border-collapse: collapse;
+    /*width: 100%;*/
+}
+
+td.significant {
+    background-color: lightgreen;
+}
+
+tr, th {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+td {
+    text-align: left;
+    padding: 2px;
+    border: 1px solid #ccc;
 }
 
 .form-input {
@@ -55,19 +89,82 @@ h1 {
     border-width: 2px;
     border-color: rgb(240, 240, 240);
     border-style: solid;
-    /*margin-top: 1px;
-    margin-bottom: 1px;*/
     font-family: "Malgun Gothic Semilight", sans-serif;
+    align-self: center;
 }
 
+.input-label {
+    display: flex;
+}
+
+header {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 1080px;
+    margin: auto;
+}
+
+body {
+    max-width: 1080px;
+    margin: auto;
+}
+
+.row-option {
+    background: #ddd;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    border-color: white !important;
+}
+
+.header-navigation {
+    display: flex;
+    gap: 10px;
+    width: 26rem;
+}
+
+h1.paragraph-header {
+    text-align: left !important;
+}
+
+.header-link {
+    border-radius: 20px;
+    padding: 10px;
+    min-width: 0;
+    flex: 1;
+
+    max-height: 20px;
+
+    text-align: center;
+    font-family: "Malgun Gothic Semilight", sans-serif;
+    color: black;
+    text-decoration: none;
+    background: #ddd;
+}
+
+/* https://www.geeksforgeeks.org/how-to-disable-arrows-from-number-input/ */
 /* Chrome, Safari, Edge, Opera */
 input.form-input::-webkit-outer-spin-button,
 input.form-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
 /* Firefox */
 input[type=number].form-input {
     -moz-appearance: textfield;
 }
+
+/* https://stackoverflow.com/a/41679399 */
+span.frac {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+span.frac > sup, span.frac > sub {
+    display: block;
+    font: inherit;
+    padding: 0 0.3em;
+}
+span.frac > sup {border-bottom: 0.08em solid;}
+span.frac > span {display: none;}
