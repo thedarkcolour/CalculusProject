@@ -93,15 +93,13 @@ function leftSum(a, dx, intervals, mathFn) {
     return sum
 }
 
-function midPointSum(a, dx, rectangles, mathFn) {
+function midPointSum(a, dx, intervals, mathFn) {
     let sum = 0
 
-    for (let i = 0; i < rectangles; i++) {
+    for (let i = 0; i < intervals; i++) {
         let rectHeight = mathFn(a + dx / 2)
 
         sum += rectHeight * dx
-
-        console.log(a + dx / 2)
 
         a += dx
     }
@@ -119,8 +117,4 @@ function trapezoidSum(a, dx, rectangles, mathFn) {
     }
 
     return sum
-}
-
-function calculateEuler() {
-
 }
